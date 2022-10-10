@@ -111,18 +111,5 @@ describe("Library Contract", function() {
       })
   })
 
-  describe("Set Finished", function() {
-      it("Should emit SetFinished event", async function () {
-          const BOOK_ID = 0;
-          const BOOK_FINISHED = true;
-
-          await expect(
-              library.setFinished(BOOK_ID, BOOK_FINISHED)
-          ).to.emit(
-              library, 'SetFinished'
-          ).withArgs(
-              BOOK_ID, BOOK_FINISHED
-          )
-      })
-  })
+  
 });
